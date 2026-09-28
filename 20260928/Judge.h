@@ -2,7 +2,7 @@
 class Judge
 {
 public:
-	void PlayerJudge();
+	void PlayerJudge(int* totalCard);
 
 	void CpuJudge();
 
@@ -16,8 +16,6 @@ public:
 
 	const int LOOS_NUM = 22;
 	const int WIN_NUM = 21;
-
-	int isDraw = false;
 
 private:
 

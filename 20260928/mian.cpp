@@ -8,6 +8,7 @@ int main(void)
 	Judge judge;
 
 	judge.PlayerJudge();
+	judge.CpuJudge();
 
 	return 0;
 }
