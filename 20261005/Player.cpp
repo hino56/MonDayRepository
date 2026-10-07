@@ -1,14 +1,9 @@
 #include "Player.h"
 using namespace std;
 
-void Player::PlayerInput()
+
+int Player::PlayerInput(int& num)
 {
-	int num;
-
-	cout << "プレイヤーと敵が1対1で戦う、ターン制のバトルゲームです。\n";
-	cout << "先に100HPを削り切った方の勝利です。\n";
-	cout << endl;
-
 	cout << "【1】: 攻撃、【2】: 回復のどちらかを選択してください。\n";
 	cout << endl;
 
@@ -25,5 +20,20 @@ void Player::PlayerInput()
 		{
 			break;
 		}
+	}
+	return num;
+}
+
+void Player::PlayerTurn(int& PlayerHp, int& EnemyHp)
+{
+	int PJudge = PlayerInput(PJudge);
+
+	if (PJudge == MIN_NUM)
+	{
+		JudgeDamage(PlayerHp, EnemyHp, true);
+	}
+	else
+	{
+		JudgeRecovery(PlayerHp, true);
 	}
 }

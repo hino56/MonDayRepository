@@ -1,8 +1,13 @@
-#include"Player.h"
+#include"Game.h"
 #include<iostream>
 
 int main(void)
 {
+	Game game;
+
 	srand((unsigned int)time(NULL));
-	Player PlayerInput();
+
+	game.GameLoop();
+
+	return 0;
 }
