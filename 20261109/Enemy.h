@@ -5,8 +5,11 @@ public:
 	Enemy();
 	~Enemy();
 
-	void Update();
+	void Draw()const;
 
-	void Draw();
+	int GetHp()const;
+
+private:
+	int Hp = 100;
 };
 

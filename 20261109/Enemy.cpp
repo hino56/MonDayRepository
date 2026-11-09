@@ -11,12 +11,25 @@ Enemy::~Enemy()
 	std::cout << "Enemyを破棄しました。" << std::endl;
 }
 
-void Enemy::Update()
+//void Enemy::Update()
+//{
+//	std::cout << "Enemyを更新しました。" << std::endl;
+//}
+
+void Enemy::Draw()const
 {
-	std::cout << "Enemyを更新しました。" << std::endl;
+	int hp = GetHp();
+	std::cout << "Enemy Hp < " << hp << " >\n";
 }
 
-void Enemy::Draw()
+int Enemy::GetHp()const
 {
-	std::cout << "Enemyを描画" << std::endl;
+	Hp;
+	return Hp;
 }
+
+//void Enemy::ShowEnemy(const Enemy& enemy)
+//{
+//	int hp = GetHp();
+//	std::cout << "Enemy Hp < " << hp << " >\n";
+//}
