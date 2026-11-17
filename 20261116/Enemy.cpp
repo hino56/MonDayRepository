@@ -1,17 +1,24 @@
 #include "Enemy.h"
+#include"Config.h"
 
-Enemy::Enemy(const std::string& name) :name(name), hp(100)
+Enemy::Enemy() :hp(Config::ENEMY_HP) {}
+Enemy::~Enemy() {}
+
+void Enemy::Damage(int damage)
 {
-	std::cout << name << "出現した\n";
+	hp -= damage;
+	if (hp < 0)
+	{
+		hp = 0;
+	}
 }
 
-Enemy::~Enemy()
+int Enemy::GetHp()const
 {
-	std::cout << name << "は破棄されました。\n";
+	return hp;
 }
 
-void Enemy::Draw()const
+bool Enemy::IsAlive()const
 {
-	std::cout << "名前" << name << "\n";
-	std::cout << "HP:" << hp << "\n";
+	return hp > 0;
 }

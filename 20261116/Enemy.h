@@ -1,16 +1,17 @@
 #pragma once
-#include<string>
-#include<iostream>
-
 class Enemy
 {
 private:
-	std::string name;
 	int hp;
 
 public:
-	Enemy(const std::string& name);
+	Enemy();
 	~Enemy();
-	void Draw()const;
+
+	void Damage(int damage);
+
+	int GetHp()const;
+
+	bool IsAlive()const;
 };
 
